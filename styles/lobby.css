@@ -1,0 +1,60 @@
+#lobby {
+    display: none;
+    width: 100%;
+    height: calc(100vh - 4.2vw);
+    background-image: url('../media/images/lobby.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.player-panel {
+    color: yellow;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 33.333%
+}
+
+.player-panel:nth-child(2) {
+    box-shadow: 0 0 50px black;
+}
+
+.add-player {
+    height: 4vw;
+    width: 4vw;
+    color: white;
+    background-color: transparent;
+    border: 0.2vw solid white;
+    transform: rotate(45deg);
+}
+
+.add-player::before, .add-player::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.1vw;
+    background-color: white;
+}
+
+.add-player::before {
+    transform: rotate(45deg);
+}
+
+.add-player::after {
+    transform: rotate(-45deg);
+}
+
+#ready {
+    position: absolute;
+    bottom: 2vw;
+    left: 2vw;
+    text-transform: uppercase;
+    width: 20vw;
+    height: auto;
+    cursor: pointer;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Apex Roulette</title>
+
+    <link rel="icon" type="image/png" href="media/images/favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Aldrich" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/lobby.css" />
+
+    <!-- Scripts -->
+    <script defer src="scripts/script.js" type="module"></script>
+</head>
+
+<body>
+
+    <!-- The navigation bar at the top -->
+    <img id="permission-icon" src="../media/images/jumpmaster.png"></img>
+    <div id="navbar">
+        <button class="tab"><p>Apex Roulette</p></button>
+        <button class="selected tab"><p>Lobby</p></button>
+        <button class="unselected tab"><p>Legends</p></button>
+        <button class="unselected tab"><p>Challenges</p></button>
+        <button class="unselected tab" id="room-tab"><p id="room-text">Room</p></button>
+    </div>
+    <div id="profile-box">
+        <img src="media/images/dice.png" id="randomize-name"></img>
+        <input id="profile" placeholder="Anonymous" type="text" autocomplete="off" size="9"/>
+    </div>
+
+    <!-- The screen shown before entering a room -->
+    <div id="prelobby">
+        <div id="room-buttons">
+            <button id="create-room">
+                <img src="media/images/leftclick.png" class="button-image"></img>
+                Create Room
+            </button>
+            <button id="join-room-button">
+                <img src="media/images/keyboard.png" class="button-image"></img>
+                Join Room
+            </button>
+            <input id="join-room-input" type="text" maxlength="6" autocomplete="off" />
+            <div id="join-room-tooltip-triangle"></div>
+            <p id="join-room-tooltip">Room not found</p>
+        </div>
+    </div>
+
+    <!-- The screen shown when in a room -->
+    <div id="lobby">
+        <div class="player-panel">
+            <h1 id="left-player-name" class="player-name">[Empty]</h1>
+            <button class="add-player"></button>
+        </div>
+
+        <div class="player-panel">
+            <h1 id="middle-player-name" class="player-name">You</h1>
+        </div>
+
+        <div class="player-panel">
+            <h1 id="right-player-name" class="player-name">[Empty]</h1>
+            <button class="add-player"></button>
+        </div>
+
+        <!-- <img id="ready" src="media/images/ready.png"></img> -->
+    </div>
+
+</body>
+
+</html>

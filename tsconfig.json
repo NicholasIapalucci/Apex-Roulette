@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "esnext",
+        "rootDir": "scripts/rawTS",
+        "outDir": "scripts/compiledTS"
+    }
+}

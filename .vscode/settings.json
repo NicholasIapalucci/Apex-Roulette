@@ -1,0 +1,65 @@
+{
+    "prettifySymbolsMode.substitutions": [{
+
+        "language": ["javascript", "typescript"],
+        "substitutions": [
+            {
+                "ugly": "<=",
+                "pretty": "≤",
+                "style": {
+                    "color": "#56B6C2"
+                }
+            },
+            {
+                "ugly": ">=",
+                "pretty": "≥",
+                "style": {
+                    "color": "#56B6C2"
+                }
+            },
+            {
+                "ugly": "=>",
+                "pretty": "⇒",
+                "style": {
+                    "color": "#56B6C2"
+                }
+            },
+            {
+                "ugly": "!",
+                "pretty": "¬",
+                "post": "[^=]",
+                "style": {
+                    "color": "#56B6C2"
+                }
+            },
+            {
+                "ugly": "forEach",
+                "pretty": "∀",
+                "style": {
+                    "color": "#61AFEF"
+                }
+            },
+            {
+                "ugly": "!==?",
+                "pretty": "≠",
+                "style": {
+                    "color": "#56B6C2"
+                }
+            }
+        ]
+    },
+    {
+        "language": "html",
+        "substitutions": [
+            {
+                "ugly": "<!--",
+                "pretty": "//",
+            },
+            {
+                "ugly": "-->",
+                "pretty": " "
+            }
+        ]
+    }
+]
+}
