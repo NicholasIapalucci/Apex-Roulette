@@ -5,6 +5,7 @@
     box-shadow: 0 0 50px black;
     height: 4.2vw;
     z-index: 2;
+    background-color: #181818;
 }
 
 #permission-icon {

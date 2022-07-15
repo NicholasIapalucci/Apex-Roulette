@@ -45,7 +45,7 @@ function enterPreLobby() {
 
 function enterLegendScreen() {
     clearScreen();
-    $("#legend-screen").style.display = "block";
+    $("#legend-screen").style.display = "flex";
 }
  
 export function enterLobby() {
@@ -179,3 +179,11 @@ export function invalidRoomCode() {
     $("#join-room-tooltip-triangle").style.display = "block";
     $("#join-room-tooltip").style.display = "flex";
 }
+
+$("#legend-button").forEach(button => {
+    button.on("mouseover", event => {
+        let src = button.children[0].src;
+        // let legend = Legend.withName(src.substring(src.lastIndexOf("/") + 1, src.indexOf(".")));
+        // $("#legend-name").innerHTML = legend.name;
+    });
+});

@@ -25,14 +25,16 @@
     width: 4vw;
     color: white;
     background-color: transparent;
-    border: 0.2vw solid white;
+    border: 0.35vw solid white;
     transform: rotate(45deg);
+    box-sizing: border-box;
 }
 
 .add-player::before, .add-player::after {
     content: "";
+    box-sizing: border-box;
     display: block;
-    width: 100%;
+    width: 80%;
     height: 0.1vw;
     background-color: white;
 }
