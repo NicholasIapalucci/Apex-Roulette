@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/lobby.css" />
+    <link rel="stylesheet" href="styles/legend.css" />
 
     <!-- Scripts -->
     <script defer src="scripts/script.js" type="module"></script>
@@ -24,8 +25,8 @@
     <img id="permission-icon" src="media/images/jumpmaster.png"></img>
     <div id="navbar">
         <button class="tab"><p>Apex Roulette</p></button>
-        <button class="selected tab"><p>Lobby</p></button>
-        <button class="unselected tab"><p>Legends</p></button>
+        <button class="selected tab" id="lobby-tab"><p>Lobby</p></button>
+        <button class="unselected tab" id="legend-tab"><p>Legends</p></button>
         <button class="unselected tab"><p>Challenges</p></button>
         <button class="unselected tab" id="room-tab"><p id="room-text">Room</p></button>
     </div>
@@ -66,9 +67,22 @@
             <h1 id="right-player-name" class="player-name">[Empty]</h1>
             <button class="add-player"></button>
         </div>
+   </div>
 
-        <!-- <img id="ready" src="media/images/ready.png"></img> -->
-    </div>
+   <div id="legend-screen">
+        <div id="legend-container">
+            <div class="legend-row">
+                <div class="legend-button"><img src="media/images/legends/bloodhound.png"></img></div>
+                <div class="legend-button"><img src="media/images/legends/gibraltar.png"></img></div>
+            </div>
+            <div class="legend-row">
+
+            </div>
+            <div class="legend-row">
+
+            </div>
+        </div>
+   </div>
 
 </body>
 

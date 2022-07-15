@@ -29,18 +29,34 @@ $(".tab").forEach(tabToSelect => tabToSelect.on("click", event => {
 
     if (tabToSelect.classList.contains("unselected")) tabToSelect.classList.remove("unselected");
     tabToSelect.classList.add("selected");
-}));
+}))
 
-export function enterLobby() {
+function clearScreen() {
     $("#prelobby").style.display = "none";
+    $("#lobby").style.display = "none";
+    $("#legend-screen").style.display = "none"
+    $("#room-tab").style.display = "none";
+}
+
+function enterPreLobby() {
+    clearScreen();
+    $("#prelobby").style.display = "block";
+}
+
+function enterLegendScreen() {
+    clearScreen();
+    $("#legend-screen").style.display = "block";
+}
+ 
+export function enterLobby() {
+    clearScreen();
     $("#lobby").style.display = "flex";
-    $("#room-tab").style.display = "initial";
+    $("#room-tab").style.display = "flex";
 }
 
 export function leaveLobby() {
+    clearScreen();
     $("#prelobby").style.display = "block";
-    $("#lobby").style.display = "none";
-    $("#room-tab").style.display = "none";
 }
 
 // Listen for the "create room" button being clicked
@@ -49,6 +65,10 @@ $("#create-room").on("click", event => {
     roomCode = rooms.generateRoomCode(6);
     rooms.create(roomCode);
 });
+
+$("#legend-tab").on("click", event => {
+    enterLegendScreen();
+})
 
 $("#join-room-input").on("keyup", event => {
     if (event.key === 'Enter') {
@@ -103,6 +123,11 @@ $("#room-tab").on("mouseout", event => {
     $("#room-text").innerHTML = "Room";
 });
 
+$("#lobby-tab").on("click", event => {
+    if (roomCode) enterLobby();
+    else enterPreLobby();
+});
+
 // Delete the room if someone closes the window. Will add support ASAP for only doing this if the host closes / migrating hosts.
 window.on("beforeunload", event => {
     if (roomCode) rooms.remove(roomCode);
@@ -129,7 +154,21 @@ $("#randomize-name").on("click", event => {
         "Gabriel",
         "Rowena",
         "Charlie",
-        "Garth"
+        "Garth",
+        "Gadreel",
+        "Metatron",
+        "Michael",
+        "Alastair",
+        "Dagon",
+        "Lilith",
+        "Ruby",
+        "Jody",
+        "Eileen",
+        "Adam",
+        "Becky",
+        "Pamela",
+        "Michigan",
+        "Gordon"
     ];
     let original = $("#profile").value;
     while ($("#profile").value === original) $("#profile").value = names[Math.floor(Math.random() * names.length)];
